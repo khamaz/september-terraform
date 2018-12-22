@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "${var.region}"
 }
 terraform {
   backend "s3" {
    bucket =  "eu-west1-state-aziz"
-   key    =  "mystate"
+   key    =  "mystate-cluster"
    region =  "eu-west-1"
-}
+ }
 }
